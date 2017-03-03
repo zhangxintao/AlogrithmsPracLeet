@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="TwoSum\TwoSum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TwoSum\TwoSumIndex.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
