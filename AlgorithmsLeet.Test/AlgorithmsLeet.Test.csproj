@@ -52,8 +52,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="2sum\TwoSumTest.cs" />
-    <Compile Include="ArrayRotation\ArrayRotationTest.cs" />
+    <Compile Include="Array\2sum\TwoSumTest.cs" />
+    <Compile Include="Array\ArrayRotation\ArrayRotationTest.cs" />
+    <Compile Include="Array\MaxIndexDistance\MaxIndexDistanceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +63,7 @@
       <Name>AlgorithmsLeet</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
