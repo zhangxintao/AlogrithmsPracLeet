@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+ * Given an integer array and a target, tell whether exist 2 integers that make sum of the 2 interger = target
+ */
 namespace AlgorithmsLeet.TwoSum
 {
     public class TwoSum
