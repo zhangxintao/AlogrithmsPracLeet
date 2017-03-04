@@ -53,6 +53,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="2sum\TwoSumTest.cs" />
+    <Compile Include="ArrayRotation\ArrayRotationTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
