@@ -40,12 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Array\ArrayRotation\ArrayRotation.cs" />
-    <Compile Include="Array\MaxIndexDistance\MaxIndexDistance.cs" />
-    <Compile Include="Array\TwoSum\TwoSum.cs" />
+    <Compile Include="Arrays\ArrayRotation\ArrayRotation.cs" />
+    <Compile Include="Arrays\MaxIndexDistance\MaxIndexDistance.cs" />
+    <Compile Include="Arrays\TwoSum\TwoSum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Array\TwoSum\TwoSumIndex.cs" />
-    <Compile Include="Array\TwoSum\TwoSumWithDuplication.cs" />
+    <Compile Include="Arrays\TwoSum\TwoSumIndex.cs" />
+    <Compile Include="Arrays\TwoSum\TwoSumWithDuplication.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -14,7 +14,7 @@ namespace AlgorithmsLeet.TwoSum
         public bool FindTwoSum_Solution1(int[] input, int target)
         {
             Array.Sort(input);
-
+            
             for (int i = 0, j = input.Length - 1; i < j;)
             {
                 if (input[i] + input[j] > target)

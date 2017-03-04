@@ -52,9 +52,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Array\2sum\TwoSumTest.cs" />
-    <Compile Include="Array\ArrayRotation\ArrayRotationTest.cs" />
-    <Compile Include="Array\MaxIndexDistance\MaxIndexDistanceTest.cs" />
+    <Compile Include="Arrays\2sum\TwoSumTest.cs" />
+    <Compile Include="Arrays\ArrayRotation\ArrayRotationTest.cs" />
+    <Compile Include="Arrays\MaxIndexDistance\MaxIndexDistanceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
