@@ -75,5 +75,64 @@ namespace AlgorithmsLeet.Test._2sum
         }
         #endregion 
 
+        #region Two Sum with duplication
+
+        [TestMethod]
+        public void GivenArrayWithTwoSumAndDuplication_Should_GetTrue()
+        {
+            var twoSumDuplicate = new TwoSumWithDuplication();
+            twoSumDuplicate.Save(1);
+            twoSumDuplicate.Save(2);
+            twoSumDuplicate.Save(7);
+            twoSumDuplicate.Save(7);
+            twoSumDuplicate.Save(5);
+            twoSumDuplicate.Save(5);
+
+            var result = twoSumDuplicate.Test(10);
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void GivenArrayWithTwoSumUnique_Should_GetTrue()
+        {
+            var twoSumDuplicate = new TwoSumWithDuplication();
+            twoSumDuplicate.Save(1);
+            twoSumDuplicate.Save(5);
+            twoSumDuplicate.Save(7);
+            twoSumDuplicate.Save(3);
+
+            var result = twoSumDuplicate.Test(10);
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void GivenArrayWithoutTwoSum_Should_GetFalse()
+        {
+            var twoSumDuplicate = new TwoSumWithDuplication();
+            twoSumDuplicate.Save(1);
+            twoSumDuplicate.Save(5);
+            twoSumDuplicate.Save(7);
+            twoSumDuplicate.Save(8);
+
+            var result = twoSumDuplicate.Test(10);
+            Assert.AreEqual(false, result);
+        }
+
+        [TestMethod]
+        public void GivenArrayWithoutTwoSum_Duplication_Should_GetFalse()
+        {
+            var twoSumDuplicate = new TwoSumWithDuplication();
+            twoSumDuplicate.Save(1);
+            twoSumDuplicate.Save(5);
+            twoSumDuplicate.Save(7);
+            twoSumDuplicate.Save(7);
+
+            var result = twoSumDuplicate.Test(10);
+
+            Assert.AreEqual(false, result);
+        }
+
+        #endregion
+
     }
 }
