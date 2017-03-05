@@ -70,5 +70,21 @@ namespace AlgorithmsLeet.Test.Arrays.OverlapInterval
         }
 
         #endregion
+
+        #region Merge Interval
+        [TestMethod]
+        public void GivenOverlapIntervals_Merge_GetMergedIntervals()
+        {
+            var intervals = new Interval[]
+            {
+                 new Interval {Start = 1, End = 5}, new Interval {Start = 6, End = 10}, new Interval {Start = 4, End = 6}, new Interval {Start = 15, End = 20}
+            };
+            var expected = new List<Interval>() { new Interval { Start = 1, End = 10 }, new Interval { Start = 15, End = 20 }};
+            var result = new IntervalMerge().Merge(intervals);
+
+            CollectionAssert.AreEqual(expected, result);
+        }
+
+        #endregion
     }
 }

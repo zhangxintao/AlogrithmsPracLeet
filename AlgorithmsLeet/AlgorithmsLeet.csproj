@@ -43,6 +43,7 @@
     <Compile Include="Arrays\ArrayRotation\ArrayRotation.cs" />
     <Compile Include="Arrays\MaxIndexDistance\MaxIndexDistance.cs" />
     <Compile Include="Arrays\OverlapInterval\IntervalInsert.cs" />
+    <Compile Include="Arrays\OverlapInterval\IntervalMerge.cs" />
     <Compile Include="Arrays\OverlapInterval\OverlapInterval.cs" />
     <Compile Include="Arrays\TwoSum\TwoSum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
