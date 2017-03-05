@@ -56,6 +56,7 @@
     <Compile Include="Arrays\ArrayPair\ArrayPairTest.cs" />
     <Compile Include="Arrays\ArrayRotation\ArrayRotationTest.cs" />
     <Compile Include="Arrays\DigitsRearrange\DigitsRearrangeTest.cs" />
+    <Compile Include="Arrays\GenerateRandomNumber\GenerateRandomNumberTest.cs" />
     <Compile Include="Arrays\MaxIndexDistance\MaxIndexDistanceTest.cs" />
     <Compile Include="Arrays\OverlapInterval\OverlapIntervalTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

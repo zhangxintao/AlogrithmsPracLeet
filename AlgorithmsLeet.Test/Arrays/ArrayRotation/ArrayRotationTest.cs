@@ -28,5 +28,9 @@ namespace AlgorithmsLeet.Test.ArrayRotation
 
             CollectionAssert.AreEqual(new int[] { 1, 2, 3, 4, 5 }, result);
         }
+
+        #region Get minimum from rotated array
+
+        #endregion
     }
 }
