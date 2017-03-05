@@ -53,6 +53,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Arrays\2sum\TwoSumTest.cs" />
+    <Compile Include="Arrays\ArrayPair\ArrayPairTest.cs" />
     <Compile Include="Arrays\ArrayRotation\ArrayRotationTest.cs" />
     <Compile Include="Arrays\MaxIndexDistance\MaxIndexDistanceTest.cs" />
     <Compile Include="Arrays\OverlapInterval\OverlapIntervalTest.cs" />

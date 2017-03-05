@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arrays\ArrayPair\ArrayPair.cs" />
     <Compile Include="Arrays\ArrayRotation\ArrayRotation.cs" />
     <Compile Include="Arrays\MaxIndexDistance\MaxIndexDistance.cs" />
     <Compile Include="Arrays\OverlapInterval\IntervalInsert.cs" />
