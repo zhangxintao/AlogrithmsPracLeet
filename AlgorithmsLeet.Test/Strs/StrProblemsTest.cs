@@ -90,5 +90,19 @@ namespace AlgorithmsLeet.Test.Strs
             Assert.IsTrue(result.Contains("CADB"));
         }
         #endregion
+
+        #region string production
+        [TestMethod]
+        public void Production_Given_Two_String_Integers_Return_Production()
+        {
+            var strProblem = new StrProblems();
+            var str1 = "123";
+            var str2 = "456";
+
+            var result = strProblem.Product(str1, str2);
+
+            Assert.AreEqual("56088", result); 
+        }
+        #endregion
     }
 }

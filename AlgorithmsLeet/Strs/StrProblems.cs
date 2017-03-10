@@ -105,5 +105,46 @@ namespace AlgorithmsLeet.Strs
             AlternationInner(str1, str2.Substring(1), current + str2.Substring(0, 1), result);
         }
         #endregion
+
+        #region integer string production
+        public string Product(string str1, string str2)
+        {
+            var productLength = str1.Length + str2.Length;
+
+            var result = new int[productLength];
+
+            int currentResultIndex = productLength - 1;
+            for (int i = str1.Length - 1; i >= 0; i--)
+            {
+                for (int j = str2.Length - 1; j >= 0; j--)
+                {
+                    var currentProduct = Convert.ToInt32(str1[i] - '0') * Convert.ToInt32(str2[j] - '0');
+                    result[i + j + 1] += currentProduct;
+                }
+            }
+
+            int carry = 0;
+            for (int i = result.Length - 1; i >= 0; i--)
+            { 
+                result[i] += carry;
+                carry = result[i] / 10;
+                result[i] = result[i] % 10;
+            }
+
+            var resultStr = string.Empty;
+            for (int i = 0; i < result.Length; i++)
+            {
+                if (i == 0 && result[i] == 0)
+                {
+                    continue;
+                }
+
+                resultStr += result[i].ToString();
+            }
+
+            return resultStr;
+
+        }
+        #endregion
     }
 }
