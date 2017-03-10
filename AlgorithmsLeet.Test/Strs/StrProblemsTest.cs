@@ -104,5 +104,42 @@ namespace AlgorithmsLeet.Test.Strs
             Assert.AreEqual("56088", result); 
         }
         #endregion
+
+        #region check whether given string is a valid number
+        [TestMethod]
+        public void IsValidNumber_Given_Valid_String_Number_Return_True()
+        {
+            var strProblem = new StrProblems();
+            var num1 = "123";
+            var num2 = "2.1";
+            var num3 = "2e1";
+
+            var r1 = strProblem.IsValidNumber(num1);
+            var r2 = strProblem.IsValidNumber(num2);
+            var r3 = strProblem.IsValidNumber(num3);
+
+            Assert.IsTrue(r1);
+            Assert.IsTrue(r2);
+            Assert.IsTrue(r3);
+        }
+
+        [TestMethod]
+        public void IsValidNumber_Given_Invalid_String_Number_Return_False()
+        {
+            var strProblem = new StrProblems();
+            var num1 = "1a";
+            var num2 = ".1";
+            var num3 = "e1";
+
+            var r1 = strProblem.IsValidNumber(num1);
+            var r2 = strProblem.IsValidNumber(num2);
+            var r3 = strProblem.IsValidNumber(num3);
+
+            Assert.IsFalse(r1);
+            Assert.IsFalse(r2);
+            Assert.IsFalse(r3);
+        }
+
+        #endregion
     }
 }

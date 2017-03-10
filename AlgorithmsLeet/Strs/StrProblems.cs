@@ -146,5 +146,24 @@ namespace AlgorithmsLeet.Strs
 
         }
         #endregion
+
+        #region Check whether given string is a valid number
+        public bool IsValidNumber(string str)
+        {
+            for (var i = 0; i < str.Length; i++)
+            {
+                if ((i == 0 || i == str.Length - 1) && (str[i] == 'e' || str[i] == '.'))
+                {
+                    return false;
+                }
+                else if (str[i] != 'e' && str[i] != '.' && (str[i] - '0' > 9 || str[i] - '0' < 0))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+        #endregion
     }
 }
