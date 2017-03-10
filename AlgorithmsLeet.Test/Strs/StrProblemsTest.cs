@@ -147,5 +147,17 @@ namespace AlgorithmsLeet.Test.Strs
         }
 
         #endregion
+
+        #region atoi
+        public void ATOI_Given_Valid_String_Return_Decimal_Number()
+        {
+
+        }
+
+        public void ATOI_Given_String_With_Invalid_Chars_Return_Decimal_Number_Without_Invalid_Chars()
+        {
+
+        }
+        #endregion
     }
 }

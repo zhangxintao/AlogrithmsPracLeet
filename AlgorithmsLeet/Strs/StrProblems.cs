@@ -171,5 +171,12 @@ namespace AlgorithmsLeet.Strs
             return true;
         }
         #endregion
+
+        #region ATOI
+        public int ATOI(string str)
+        {
+            throw new NotImplementedException();
+        } 
+        #endregion
     }
 }
