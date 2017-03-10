@@ -70,5 +70,25 @@ namespace AlgorithmsLeet.Test.Strs
             Assert.IsTrue(result.Contains("()()()"));
         }
         #endregion
+
+        #region String exchange
+        [TestMethod]
+        public void Alternation_Given_Two_Strings_Return_All_Combinations_Keep_RelativeOrder()
+        {
+            var strProblem = new StrProblems();
+            var str1 = "AB";
+            var str2 = "CD";
+
+            var result = strProblem.Alternation(str1, str2);
+
+            Assert.AreEqual(6, result.Count);
+            Assert.IsTrue(result.Contains("ABCD"));
+            Assert.IsTrue(result.Contains("ACDB"));
+            Assert.IsTrue(result.Contains("ACBD"));
+            Assert.IsTrue(result.Contains("CDAB"));
+            Assert.IsTrue(result.Contains("CABD"));
+            Assert.IsTrue(result.Contains("CADB"));
+        }
+        #endregion
     }
 }

@@ -76,5 +76,34 @@ namespace AlgorithmsLeet.Strs
             }
         }
         #endregion
+
+        #region String exchange
+        public List<string> Alternation(string str1, string str2)
+        {
+            var result = new List<string>();
+            AlternationInner(str1, str2, "", result);
+            return result;
+        }
+
+        private void AlternationInner(string str1, string str2, string current, List<string> result)
+        {
+            if (str1.Length == 0)
+            {
+                current += str2;
+                result.Add(current);
+                return;
+            }
+
+            if (str2.Length == 0)
+            {
+                current += str1;
+                result.Add(current);
+                return;
+            }
+
+            AlternationInner(str1.Substring(1), str2, current + str1.Substring(0, 1), result);
+            AlternationInner(str1, str2.Substring(1), current + str2.Substring(0, 1), result);
+        }
+        #endregion
     }
 }
