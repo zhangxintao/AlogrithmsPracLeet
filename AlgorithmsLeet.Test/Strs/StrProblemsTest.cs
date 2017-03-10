@@ -113,14 +113,17 @@ namespace AlgorithmsLeet.Test.Strs
             var num1 = "123";
             var num2 = "2.1";
             var num3 = "2e1";
+            var num4 = " 0.1";
 
             var r1 = strProblem.IsValidNumber(num1);
             var r2 = strProblem.IsValidNumber(num2);
             var r3 = strProblem.IsValidNumber(num3);
+            var r4 = strProblem.IsValidNumber(num4);
 
             Assert.IsTrue(r1);
             Assert.IsTrue(r2);
             Assert.IsTrue(r3);
+            Assert.IsTrue(r4);
         }
 
         [TestMethod]
@@ -130,14 +133,17 @@ namespace AlgorithmsLeet.Test.Strs
             var num1 = "1a";
             var num2 = ".1";
             var num3 = "e1";
+            var num4 = "1 3";
 
             var r1 = strProblem.IsValidNumber(num1);
             var r2 = strProblem.IsValidNumber(num2);
             var r3 = strProblem.IsValidNumber(num3);
+            var r4 = strProblem.IsValidNumber(num4);
 
             Assert.IsFalse(r1);
             Assert.IsFalse(r2);
             Assert.IsFalse(r3);
+            Assert.IsFalse(r4);
         }
 
         #endregion

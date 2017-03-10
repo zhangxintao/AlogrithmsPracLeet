@@ -150,6 +150,12 @@ namespace AlgorithmsLeet.Strs
         #region Check whether given string is a valid number
         public bool IsValidNumber(string str)
         {
+            str = str.Trim();
+            if (str.Length == 0)
+            {
+                return false;
+            }
+
             for (var i = 0; i < str.Length; i++)
             {
                 if ((i == 0 || i == str.Length - 1) && (str[i] == 'e' || str[i] == '.'))
