@@ -52,5 +52,23 @@ namespace AlgorithmsLeet.Test.Strs
             Assert.IsFalse(result);
         }
         #endregion
+
+        #region Generate All possible combination for N pairs of Parenthesis
+        [TestMethod]
+        public void GenerateParenthesis_Given_3_Pairs_Return_All_Combination()
+        {
+            var strProblem = new StrProblems();
+            var n = 3;
+
+            var result = strProblem.GenerateParenthesis(n);
+
+            Assert.AreEqual(5, result.Count);
+            Assert.IsTrue(result.Contains("((()))"));
+            Assert.IsTrue(result.Contains("(())()"));
+            Assert.IsTrue(result.Contains("(()())"));
+            Assert.IsTrue(result.Contains("()(())"));
+            Assert.IsTrue(result.Contains("()()()"));
+        }
+        #endregion
     }
 }

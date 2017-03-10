@@ -8,6 +8,7 @@ namespace AlgorithmsLeet.Strs
 {
     public class StrProblems
     {
+        #region Checks whether a string contains dupliate chars
         public bool ContainsDuplication(string str)
         {
             Dictionary<char, int> strsDict = new Dictionary<char, int>();
@@ -45,5 +46,35 @@ namespace AlgorithmsLeet.Strs
 
             return false;
         }
+        #endregion
+
+        #region Generate All possible combination for N pairs of Parenthesis
+
+        public List<string> GenerateParenthesis(int n)
+        {
+            var result = new List<string>();
+            generateParenthesisInner(n, n, "", result);
+            return result;
+        }
+
+        private void generateParenthesisInner(int left, int right, string currentStr, List<string> result)
+        {
+            if (left == 0 && right == 0)
+            {
+                result.Add(currentStr);
+                return;
+            }
+
+            if (left > 0)
+            {
+                generateParenthesisInner(left - 1, right, currentStr + "(", result);
+            }
+
+            if (right > 0 && right > left)
+            {
+                generateParenthesisInner(left, right - 1, currentStr + ")", result);
+            }
+        }
+        #endregion
     }
 }
