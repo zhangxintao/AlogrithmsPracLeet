@@ -50,6 +50,7 @@
     <Compile Include="Arrays\OverlapInterval\OverlapInterval.cs" />
     <Compile Include="Arrays\TwoSum\TwoSum.cs" />
     <Compile Include="DP\ContinousSubarray.cs" />
+    <Compile Include="DP\Matrix.cs" />
     <Compile Include="DP\WordBreak.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Arrays\TwoSum\TwoSumIndex.cs" />
