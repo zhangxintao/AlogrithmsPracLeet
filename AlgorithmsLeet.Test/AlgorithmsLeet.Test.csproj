@@ -61,6 +61,7 @@
     <Compile Include="Arrays\OverlapInterval\OverlapIntervalTest.cs" />
     <Compile Include="DP\ContinousSubarrayTest.cs" />
     <Compile Include="DP\MatrixTest.cs" />
+    <Compile Include="DP\TriangleTest.cs" />
     <Compile Include="DP\WordBreakTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Strs\StrProblemsTest.cs" />
