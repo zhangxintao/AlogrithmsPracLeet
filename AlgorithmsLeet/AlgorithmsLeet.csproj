@@ -50,6 +50,7 @@
     <Compile Include="Arrays\OverlapInterval\OverlapInterval.cs" />
     <Compile Include="Arrays\TwoSum\TwoSum.cs" />
     <Compile Include="DP\ContinousSubarray.cs" />
+    <Compile Include="DP\Decode.cs" />
     <Compile Include="DP\Matrix.cs" />
     <Compile Include="DP\Paint.cs" />
     <Compile Include="DP\Stair.cs" />
