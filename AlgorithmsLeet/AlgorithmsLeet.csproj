@@ -51,6 +51,7 @@
     <Compile Include="Arrays\TwoSum\TwoSum.cs" />
     <Compile Include="DP\ContinousSubarray.cs" />
     <Compile Include="DP\Matrix.cs" />
+    <Compile Include="DP\Paint.cs" />
     <Compile Include="DP\Stair.cs" />
     <Compile Include="DP\Triangle.cs" />
     <Compile Include="DP\WordBreak.cs" />
