@@ -34,5 +34,31 @@ namespace AlgorithmsLeet.DP
 
             return dp[input.Length - 1, input[0].Length - 1];
         }
+
+        public int TotalCountOfPath(int[][] input)
+        {
+            int rows = input.Length;
+            int cols = input[0].Length;
+            var dp = new int[rows, cols];
+            for (int i = 0; i < cols; i++)
+            {
+                dp[0,i] = 1;
+            }
+
+            for (int i = 0; i < rows; i++)
+            {
+                dp[i, 0] = 1;
+            }
+
+            for (int i = 1; i < rows; i++)
+            {
+                for (int j = 1; j < cols; j++)
+                {
+                    dp[i, j] = dp[i - 1, j] + dp[i, j - 1];
+                }
+            }
+
+            return dp[rows - 1, cols - 1];
+        }
     }
 }
