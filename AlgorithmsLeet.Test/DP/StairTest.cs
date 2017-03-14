@@ -16,5 +16,15 @@ namespace AlgorithmsLeet.Test.DP
 
             Assert.AreEqual(5, result);
         }
+
+        [TestMethod]
+        public void GetWaysOfClimbDP_Given_Stairs_Return_Ways_of_Climbing()
+        {
+            var stair = new Stair();
+
+            var result = stair.GetWaysOfClimbDP(4);
+
+            Assert.AreEqual(5, result);
+        }
     }
 }
