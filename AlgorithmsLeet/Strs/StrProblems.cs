@@ -178,5 +178,30 @@ namespace AlgorithmsLeet.Strs
             throw new NotImplementedException();
         } 
         #endregion
+
+        #region Ip Address
+
+        public string[] GetIp(string str)
+        {
+            throw new NotImplementedException();
+        }
+
+        private List<string> GetIp(int part, string remain, string currnet, List<string> result)
+        {
+            if (remain == null || remain.Length == 0)
+            {
+                result.Add(currnet);
+                return result;
+            }
+
+            if (remain.Length < part)
+            {
+                return result;
+            }
+
+            
+        }
+
+        #endregion
     }
 }

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AlgorithmsLeet.Strs;
 
@@ -158,6 +160,22 @@ namespace AlgorithmsLeet.Test.Strs
         {
 
         }
+        #endregion
+
+        #region ip
+
+        public void GetIp_Given_Integer_String_Return_All_Possible_IPs()
+        {
+            var strproblem = new StrProblems();
+
+            var result = strproblem.GetIp("10112");
+
+            Assert.AreEqual(3, result.Length);
+            Assert.IsTrue(result.Contains("1.0.1.12"));
+            Assert.IsTrue(result.Contains("1.0.11.2"));
+            Assert.IsTrue(result.Contains("10.1.1.2"));
+        }
+
         #endregion
     }
 }
