@@ -51,6 +51,7 @@
     <Compile Include="Arrays\TwoSum\TwoSum.cs" />
     <Compile Include="DP\ContinousSubarray.cs" />
     <Compile Include="DP\Decode.cs" />
+    <Compile Include="DP\LongestCommonSequence.cs" />
     <Compile Include="DP\LongestIncreasingSubsequence.cs" />
     <Compile Include="DP\Matrix.cs" />
     <Compile Include="DP\Paint.cs" />
