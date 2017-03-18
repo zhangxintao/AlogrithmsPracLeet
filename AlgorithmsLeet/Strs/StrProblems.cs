@@ -188,18 +188,9 @@ namespace AlgorithmsLeet.Strs
 
         private List<string> GetIp(int part, string remain, string currnet, List<string> result)
         {
-            if (remain == null || remain.Length == 0)
-            {
-                result.Add(currnet);
-                return result;
-            }
+            return null;
 
-            if (remain.Length < part)
-            {
-                return result;
-            }
 
-            
         }
 
         #endregion

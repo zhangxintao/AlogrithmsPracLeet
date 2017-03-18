@@ -30,6 +30,41 @@ namespace AlgorithmsLeet.Test.ArrayRotation
         }
 
         #region Get minimum from rotated array
+        [TestMethod]
+        public void Min_Given_Rotated_Array_Return_Min()
+        {
+            var input = new int[] { 5, 6, 1, 2, 3, 4};
+            var rotation = new AlgorithmsLeet.ArrayRotation.ArrayRotation();
+
+            var result = rotation.Min(input);
+
+            Assert.AreEqual(1, result);
+        }
+
+        #endregion
+
+        #region Search in rotated array
+        [TestMethod]
+        public void Index_Given_Rotated_Array_And_Target_Return_Index()
+        {
+            var input = new int[] {5, 6, 1, 2, 3, 4};
+            var rotate = new AlgorithmsLeet.ArrayRotation.ArrayRotation();
+
+            var index = rotate.Index(input, 1);
+
+            Assert.AreEqual(2, index);
+        }
+
+        [TestMethod]
+        public void Index_Given_Rotated_Array_And_Not_Exist_Target_Return_Minus_One()
+        {
+            var input = new int[] { 5, 6, 1, 2, 3, 4 };
+            var rotate = new AlgorithmsLeet.ArrayRotation.ArrayRotation();
+
+            var index = rotate.Index(input, 8);
+
+            Assert.AreEqual(-1, index);
+        }
 
         #endregion
     }
