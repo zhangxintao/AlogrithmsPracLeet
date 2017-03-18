@@ -59,6 +59,7 @@
     <Compile Include="Arrays\FirstPositiveNumber.cs" />
     <Compile Include="Arrays\GenerateRandomNumber\GenerateRandomNumberTest.cs" />
     <Compile Include="Arrays\MaxIndexDistance\MaxIndexDistanceTest.cs" />
+    <Compile Include="Arrays\MergeSortedArrayTest.cs" />
     <Compile Include="Arrays\OverlapInterval\OverlapIntervalTest.cs" />
     <Compile Include="DP\ContinousSubarrayTest.cs" />
     <Compile Include="DP\DecodeTest.cs" />

@@ -46,6 +46,7 @@
     <Compile Include="Arrays\FirstPositiveNumber.cs" />
     <Compile Include="Arrays\GenerateRandomNumber\GenerateRandomNumber.cs" />
     <Compile Include="Arrays\MaxIndexDistance\MaxIndexDistance.cs" />
+    <Compile Include="Arrays\MergeSortedArray.cs" />
     <Compile Include="Arrays\OverlapInterval\IntervalInsert.cs" />
     <Compile Include="Arrays\OverlapInterval\IntervalMerge.cs" />
     <Compile Include="Arrays\OverlapInterval\OverlapInterval.cs" />
