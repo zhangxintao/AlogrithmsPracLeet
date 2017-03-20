@@ -27,7 +27,7 @@ namespace AlgorithmsLeet.Test.LinkList
             l23.Val = 20;
             l22.Next = l23;
 
-            AlgorithmsLeet.LinkList.LinkList list = new AlgorithmsLeet.LinkList.LinkList();
+            var list = new AlgorithmsLeet.LinkList.LinkList();
 
             var result = list.MergeTwoOrderedLinkList(l1head, l2head);
 
@@ -39,6 +39,33 @@ namespace AlgorithmsLeet.Test.LinkList
             Assert.AreEqual(20, result.Next.Next.Next.Next.Val);
             Assert.AreEqual(5, l1head.Val);
             Assert.AreEqual(10, l2head.Val);
+        }
+
+        [TestMethod]
+        public void CircleLength()
+        {
+            var list = new AlgorithmsLeet.LinkList.LinkList();
+            var node3 = new ListNode(3);
+            var head = node3;
+            var node8 = new ListNode(8);
+            node3.Next = node8;
+            var node7 = new ListNode(7);
+            node8.Next = node7;
+            var node1 = new ListNode(1);
+            node7.Next = node1;
+            var node2 = new ListNode(2);
+            node1.Next = node2;
+            var nodeSecond3 = new ListNode(3);
+            node2.Next = nodeSecond3;
+            var node4 = new ListNode(4);
+            nodeSecond3.Next = node4;
+            var node5 = new ListNode(5);
+            node4.Next = node5;
+            node5.Next = node1; 
+
+            var result = list.CircleLength(head);
+
+            Assert.AreEqual(5, result);
         }
     }
 }

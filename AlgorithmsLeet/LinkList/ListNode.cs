@@ -13,6 +13,10 @@ namespace AlgorithmsLeet.LinkList
 
         }
 
+        public ListNode(int val)
+        {
+            this.Val = val;
+        }
         public int Val { get; set; }
         public ListNode Next { get; set; }
     }

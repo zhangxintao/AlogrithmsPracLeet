@@ -46,5 +46,57 @@ namespace AlgorithmsLeet.LinkList
             return head.Next;
         }
         #endregion
+
+        #region cicle length
+
+        public int CircleLength(ListNode head)
+        {
+            if (head == null || head.Next == null)
+            {
+                return 0;
+            }
+
+            var slow = head;
+            var fast = head.Next;
+
+            while (slow != null && fast != null)
+            {
+                if (slow == fast)
+                {
+                    break;
+                }
+                else
+                {
+                    slow = slow.Next;
+
+                    if (fast.Next == null)
+                    {
+                        return 0;
+                    }
+                    else
+                    {
+                        fast = fast.Next.Next;
+                    }
+                }
+            }
+
+            if (slow != fast)
+            {
+                return 0;
+            }
+
+            int length = 1;
+            var found = slow;
+            slow = slow.Next;
+            while (slow != found)
+            {
+                slow = slow.Next;
+                length++;
+            }
+
+            return length;
+        }
+
+        #endregion
     }
 }
