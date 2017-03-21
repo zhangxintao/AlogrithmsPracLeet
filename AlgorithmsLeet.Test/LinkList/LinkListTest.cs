@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq.Expressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AlgorithmsLeet.LinkList;
 
@@ -136,6 +137,32 @@ namespace AlgorithmsLeet.Test.LinkList
             Assert.AreEqual(0, result.Next.Val);
             Assert.AreEqual(1, result.Next.Next.Val);
             Assert.AreEqual(1, result.Next.Next.Next.Val);
+        }
+
+        [TestMethod]
+        public void Partition_Given_Integer_List_With_Target_Return_Partitioned_List()
+        {
+            var l = new ListNode(4);
+            var head = l;
+            l.Next = new ListNode(3);
+            l = l.Next;
+            l.Next = new ListNode(2);
+            l = l.Next;
+            l.Next = new ListNode(1);
+            l = l.Next;
+            l.Next = new ListNode(2);
+            l = l.Next;
+            l.Next = new ListNode(5);
+            var list = new AlgorithmsLeet.LinkList.LinkList();
+
+            var result = list.Partition(head, 3);
+
+            Assert.AreEqual(2, result.Val);
+            Assert.AreEqual(1, result.Next.Val);
+            Assert.AreEqual(2, result.Next.Next.Val);
+            Assert.AreEqual(4, result.Next.Next.Next.Val);
+            Assert.AreEqual(3, result.Next.Next.Next.Next.Val);
+            Assert.AreEqual(5, result.Next.Next.Next.Next.Next.Val);
         }
     }
 }

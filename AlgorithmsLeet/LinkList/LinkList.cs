@@ -164,5 +164,35 @@ namespace AlgorithmsLeet.LinkList
         }
 
         #endregion
+
+        #region Partition
+
+        public ListNode Partition(ListNode l, int target)
+        {
+            var dummyFirst = new ListNode(0);
+            var firstHead = dummyFirst;
+            var dummySec = new ListNode(0);
+            var secHead = dummySec;
+
+            while (l != null)
+            {
+                if (l.Val < target)
+                {
+                    dummyFirst.Next = new ListNode(l.Val);
+                    dummyFirst = dummyFirst.Next;
+                }
+                else
+                {
+                    dummySec.Next = new ListNode(l.Val);
+                    dummySec = dummySec.Next;
+                }
+                l = l.Next;
+            }
+            dummyFirst.Next = secHead.Next;
+
+            return firstHead.Next;
+        }
+
+        #endregion
     }
 }
