@@ -116,6 +116,23 @@ namespace AlgorithmsLeet.LinkList
             return newHead;
         }
 
+        public ListNode ReverseIter(ListNode head)
+        {
+            if (head == null || head.Next == null)
+            {
+                return head;
+            }
+
+            while (head.Next != null)
+            {
+                var next = head.Next;
+                head.Next = null;
+                next.Next = head;
+                head = next;
+            }
+
+            return head;
+        }
         #endregion
     }
 }
