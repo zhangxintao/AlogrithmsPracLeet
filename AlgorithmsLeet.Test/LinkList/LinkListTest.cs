@@ -113,5 +113,29 @@ namespace AlgorithmsLeet.Test.LinkList
             Assert.AreEqual(2, result.Next.Next.Next.Val);
 
         }
+
+        [TestMethod]
+        public void Add_Given_Two_Integers_Link_List_Return_Sum_Link_List()
+        {
+            var list = new AlgorithmsLeet.LinkList.LinkList();
+            var l1 = new ListNode(2);
+            var l1head = l1;
+            l1.Next = new ListNode(4);
+            l1 = l1.Next;
+            l1.Next = new ListNode(6);
+
+            var l2 = new ListNode(5);
+            var l2head = l2;
+            l2.Next = new ListNode(6);
+            l2 = l2.Next;
+            l2.Next = new ListNode(4);
+
+            var result = list.Add(l1head, l2head);
+
+            Assert.AreEqual(7, result.Val);
+            Assert.AreEqual(0, result.Next.Val);
+            Assert.AreEqual(1, result.Next.Next.Val);
+            Assert.AreEqual(1, result.Next.Next.Next.Val);
+        }
     }
 }

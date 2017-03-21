@@ -134,5 +134,35 @@ namespace AlgorithmsLeet.LinkList
             return head;
         }
         #endregion
+
+        #region Add two integers
+
+        public ListNode Add(ListNode l1, ListNode l2)
+        {
+            ListNode l3 = new ListNode(0);
+            var head = l3;
+            int carry = 0;
+            var l1Value = 0;
+            var l2Value = 0;
+            var l1Head = l1;
+            var l2Head = l2;
+
+            while (l1Head != null || l2Head != null || carry > 0)
+            {
+                l1Value = l1Head == null ? 0 : l1Head.Val;
+                l2Value = l2Head == null ? 0 : l2Head.Val;
+
+                l3.Next = new ListNode((l1Value + l2Value + carry)%10);
+                carry = (l1Value + l2Value + carry)/10;
+                l3 = l3.Next;
+
+                l1Head = l1Head == null ? null : l1Head.Next;
+                l2Head = l2Head == null ? null : l2Head.Next;
+            }
+
+            return head.Next;
+        }
+
+        #endregion
     }
 }
