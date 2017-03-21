@@ -109,11 +109,11 @@ namespace AlgorithmsLeet.LinkList
                 return head;
             }
 
-            var prev = ReverseRecur(head.Next);
-            prev.Next = head;
+            var newHead = ReverseRecur(head.Next);
+            head.Next.Next = head;
             head.Next = null;
 
-            return head;
+            return newHead;
         }
 
         #endregion
