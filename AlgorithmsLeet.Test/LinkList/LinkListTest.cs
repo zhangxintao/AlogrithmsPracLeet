@@ -164,5 +164,28 @@ namespace AlgorithmsLeet.Test.LinkList
             Assert.AreEqual(3, result.Next.Next.Next.Next.Val);
             Assert.AreEqual(5, result.Next.Next.Next.Next.Next.Val);
         }
+
+        [TestMethod]
+        public void RemoveDuplicates_Given_Ordered_Link_List_With_Duplicates_Return_List_Without_Duplicates()
+        {
+            var l = new ListNode(1);
+            var head = l;
+            l.Next = new ListNode(1);
+            l = l.Next;
+            l.Next = new ListNode(1);
+            l = l.Next;
+            l.Next = new ListNode(2);
+            l = l.Next;
+            l.Next = new ListNode(2);
+            l = l.Next;
+            l.Next = new ListNode(3);
+            var list = new AlgorithmsLeet.LinkList.LinkList();
+
+            var result = list.RemoveDuplicates(head);
+
+            Assert.AreEqual(1, result.Val);
+            Assert.AreEqual(2, result.Next.Val);
+            Assert.AreEqual(3, result.Next.Next.Val);
+        }
     }
 }

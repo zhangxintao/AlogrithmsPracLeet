@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -191,6 +192,36 @@ namespace AlgorithmsLeet.LinkList
             dummyFirst.Next = secHead.Next;
 
             return firstHead.Next;
+        }
+
+        #endregion
+
+        #region remove duplicates
+
+        public ListNode RemoveDuplicates(ListNode l)
+        {
+            if (l == null || l.Next == null)
+            {
+                return l;
+            }
+
+            ListNode prev = l;
+            ListNode iter = l.Next;
+            ListNode head = new ListNode(prev.Val);
+            ListNode resulthead = head;
+
+            while (iter != null)
+            {
+                if (iter.Val != prev.Val)
+                {
+                    head.Next = new ListNode(iter.Val);
+                    head = head.Next;
+                    prev = iter;
+                }
+                iter = iter.Next;
+            }
+
+            return resulthead;
         }
 
         #endregion
