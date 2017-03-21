@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Odbc;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -95,6 +96,24 @@ namespace AlgorithmsLeet.LinkList
             }
 
             return length;
+        }
+
+        #endregion
+
+        #region Reverse
+
+        public ListNode ReverseRecur(ListNode head)
+        {
+            if (head.Next == null)
+            {
+                return head;
+            }
+
+            var prev = ReverseRecur(head.Next);
+            prev.Next = head;
+            head.Next = null;
+
+            return head;
         }
 
         #endregion

@@ -67,5 +67,28 @@ namespace AlgorithmsLeet.Test.LinkList
 
             Assert.AreEqual(5, result);
         }
+
+        [TestMethod]
+        public void ReverseRecur_Given_LinkList_Return_Reversed_LinkList()
+        {
+            var list = new AlgorithmsLeet.LinkList.LinkList();
+            var node2 = new ListNode(2);
+            var head = node2;
+            var node3 = new ListNode(3);
+            node2.Next = node3;
+            var node4 = new ListNode(4);
+            node3.Next = node4;
+            var node5 = new ListNode(5);
+            node4.Next = node5;
+
+            var result = list.ReverseRecur(head);
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual(5, result.Val);
+            Assert.AreEqual(4, result.Next.Val);
+            Assert.AreEqual(3, result.Next.Next.Val);
+            Assert.AreEqual(2, result.Next.Next.Next.Val);
+
+        }
     }
 }
