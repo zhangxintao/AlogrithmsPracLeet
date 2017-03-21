@@ -73,6 +73,7 @@
     <Compile Include="LinkList\LinkListTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Strs\StrProblemsTest.cs" />
+    <Compile Include="TwoPointers\TwoPointersTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AlgorithmsLeet\AlgorithmsLeet.csproj">

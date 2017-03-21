@@ -67,6 +67,7 @@
     <Compile Include="Arrays\TwoSum\TwoSumIndex.cs" />
     <Compile Include="Arrays\TwoSum\TwoSumWithDuplication.cs" />
     <Compile Include="Strs\StrProblems.cs" />
+    <Compile Include="TwoPointers\TwoPointers.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
