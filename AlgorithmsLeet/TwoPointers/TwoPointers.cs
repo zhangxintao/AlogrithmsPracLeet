@@ -98,5 +98,37 @@ namespace AlgorithmsLeet.TwoPointers
         }
 
         #endregion
+
+        #region Sort Colors
+
+        public int[] SortColors(int[] a)
+        {
+            int head = 0;
+            int tail = a.Length - 1;
+
+            for (int i = 0; i < tail; i++)
+            {
+                if (a[i] == 0)
+                {
+                    var temp = a[i];
+                    a[i] = a[head];
+                    a[head] = temp;
+                    head++;
+                }
+
+                if (a[i] == 2)
+                {
+                    var temp = a[i];
+                    a[i] = a[tail];
+                    a[tail] = temp;
+                    tail--;
+                    i--;
+                }
+            }
+
+            return a;
+        }
+
+        #endregion
     }
 }

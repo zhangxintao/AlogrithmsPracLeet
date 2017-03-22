@@ -41,5 +41,20 @@ namespace AlgorithmsLeet.Test.TwoPointers
 
             Assert.AreEqual(5, result);
         }
+
+        [TestMethod]
+        public void SortColors_Given_Colors_Return_Sorted_Colors()
+        {
+            var a = new[] { 2, 1, 0, 2, 0 };
+            var instance = new AlgorithmsLeet.TwoPointers.TwoPointers();
+
+            var result = instance.SortColors(a);
+
+            Assert.AreEqual(0, result[0]);
+            Assert.AreEqual(0, result[1]);
+            Assert.AreEqual(1, result[2]);
+            Assert.AreEqual(2, result[3]);
+            Assert.AreEqual(2, result[4]);
+        }
     }
 }
