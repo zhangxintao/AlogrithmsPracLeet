@@ -167,5 +167,77 @@ namespace AlgorithmsLeet.TwoPointers
             return false;
         }
         #endregion
+
+        #region max area
+        public int MaxArea(int[] a)
+        {
+            if (a == null || a.Length <= 1)
+            {
+                return 0;
+            }
+
+            int maxArea = 0;
+            int head = 0, tail = a.Length - 1;
+
+            while (head < tail)
+            {
+                maxArea = Math.Max(maxArea, Math.Min(a[head], a[tail]) * (tail - head));
+                if (a[head] < a[tail])
+                {
+                    head++;
+                }
+                else
+                {
+                    tail--;
+                }
+            }
+
+            return maxArea;
+        }
+
+        #endregion
+
+        #region Get Magnitude Point
+        public int GetMagnitudePoint(int[] a)
+        {
+            if (a == null || a.Length < 3)
+            {
+                return -1;
+            }
+
+            var isMaxInSubSequence = new bool[a.Length];
+            int max = a[0];
+            for (int i = 1; i < a.Length-1; i++)
+            {
+                if (a[i] >= max)
+                {
+                    isMaxInSubSequence[i] = true;
+                    max = a[i];
+                }
+                else
+                {
+                    isMaxInSubSequence[i] = false;
+                }
+            }
+
+            int min = a[a.Length - 1];
+            for (int i = a.Length - 2; i >= 0; i--)
+            {
+                if (a[i] <= min)
+                {
+                    if (isMaxInSubSequence[i])
+                    {
+                        return i;
+                    }
+                    else
+                    {
+                        min = a[i];
+                    }
+                }
+            }
+
+            return -1;
+        }
+        #endregion
     }
 }

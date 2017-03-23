@@ -78,5 +78,27 @@ namespace AlgorithmsLeet.Test.TwoPointers
 
             Assert.IsFalse(result);
         }
+
+        [TestMethod]
+        public void MaxArea_Given_Non_Negative_Array_Return_Max_Area()
+        {
+            var a = new[] { 0, 1, 3, 3, 2 };
+            var instance = new AlgorithmsLeet.TwoPointers.TwoPointers();
+
+            var result = instance.MaxArea(a);
+
+            Assert.AreEqual(4, result);
+        }
+
+        [TestMethod]
+        public void GetMagnitudePoint_Given_Array_Return_MagnitudePoint()
+        {
+            var a = new[] { 1, 0, 1, 0, 1, 2, 3 };
+            var instance = new AlgorithmsLeet.TwoPointers.TwoPointers();
+
+            var result = instance.GetMagnitudePoint(a);
+
+            Assert.AreEqual(5, result);
+        }
     }
 }
