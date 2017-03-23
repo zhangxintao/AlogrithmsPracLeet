@@ -130,5 +130,42 @@ namespace AlgorithmsLeet.TwoPointers
         }
 
         #endregion
+
+        #region can jump
+        public bool CanJump(int[] a)
+        {
+            if (a == null || a.Length == 0)
+            {
+                return false;
+            }
+
+            if (a[0] == 0)
+            {
+                return false;
+            }
+
+            int longest = 0;
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (a[i] == 0)
+                {
+                    if (longest <= i)
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    longest = Math.Max(a[i] + i, longest);
+                    if (longest >= a.Length - 1)
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+        #endregion
     }
 }

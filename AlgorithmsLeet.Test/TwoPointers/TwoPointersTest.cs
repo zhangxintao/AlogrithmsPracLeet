@@ -56,5 +56,27 @@ namespace AlgorithmsLeet.Test.TwoPointers
             Assert.AreEqual(2, result[3]);
             Assert.AreEqual(2, result[4]);
         }
+
+        [TestMethod]
+        public void CanJump_Given_Jumpable_Array_Return_True()
+        {
+            var a = new[] { 2, 1, 3, 1, 1 };
+            var instance = new AlgorithmsLeet.TwoPointers.TwoPointers();
+
+            var result = instance.CanJump(a);
+
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void CanJump_Given_Not_Jumpable_Array_Return_False()
+        {
+            var a = new[] { 3, 2, 1, 0, 1 };
+            var instance = new AlgorithmsLeet.TwoPointers.TwoPointers();
+
+            var result = instance.CanJump(a);
+
+            Assert.IsFalse(result);
+        }
     }
 }
